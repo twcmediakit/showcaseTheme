@@ -21,32 +21,29 @@
 
 <!-- Mobile Internet Explorer ClearType Technology -->
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
-<script>
-console.log('{{ ASSET_PATH }}');
-</script>
 <!-- Bootstrap -->
-<link href="{{ ASSET_PATH }}/_include/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Revolution Slider -->
-<link href="{{ ASSET_PATH }}/_include/rs-plugin/css/settings.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/rs-plugin/css/settings.css" rel="stylesheet">
 
 <!-- Main Style -->
-<link href="{{ ASSET_PATH }}/_include/css/main.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/main.css" rel="stylesheet">
 
 <!-- FancyBox -->
-<link href="{{ ASSET_PATH }}/_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
 
 <!-- Font Icons -->
-<link href="{{ ASSET_PATH }}/_include/css/fonts.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/fonts.css" rel="stylesheet">
 
 <!-- Shortcodes -->
-<link href="{{ ASSET_PATH }}/_include/css/shortcodes.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/shortcodes.css" rel="stylesheet">
 
 <!-- Responsive -->
-<link href="{{ ASSET_PATH }}/_include/css/responsive.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/responsive.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="{{ ASSET_PATH }}/_include/css/custom.css" rel="stylesheet">
+<link href="http://www.twcmediakit.com/_include/css/custom.css" rel="stylesheet">
 
 <!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -60,28 +57,407 @@ console.log('{{ ASSET_PATH }}');
 <link rel="apple-touch-icon" sizes="144x144" href="#">
 
 <!-- Modernizr -->
-<script src="{{ ASSET_PATH }}/_include/js/modernizr.js"></script>
+<script src="http://www.twcmediakit.com/_include/js/modernizr.js"></script>
 
 </head>
 
-  <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="span2">
+                <div id="logo">
+                 <a href="/" title="The Weather Company"> <img src="http://www.twcmediakit.com/_include/img/misc/WxCo_Logo-150x123.png" width="120" height="103"></a>
+                </div>
+            </div>
+            
+            <div class="span10">
+                <!-- Mobile Menu -->
+                <a id="mobile-nav" class="menu-nav" href="#menu-nav"><span class="menu-icon"></span></a>
+                
+                <!-- Standard Menu -->
+                    <nav id="menu">
+                    <ul id="menu-nav">
+                        <li><a href="http://www.twcmediakit.com/brands/">Brands</a></li>
+                        <li><a href="#">Television</a>
+                            <ul class="sub-menu arrow-up">
+                                <li><a href="http://www.twcmediakit.com/television/audience/">Audience</a></li>
+                                <li><a href="http://www.twcmediakit.com/television/programming/scheduling/">2013 Schedule</a></li>
+                                <li><a href="http://www.twcmediakit.com/television/programming/live/">TV Live</a></li>
+                                <li><a href="http://www.twcmediakit.com/television/programming/original-series/">Original Series</a></li>
+                                <li><a href="http://www.twcmediakit.com/television/ad-products">Product Specs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Web</a>
+                            <ul class="sub-menu">
+                                <li><a href="http://www.twcmediakit.com/web/audience/">Audience</a></li>
+                                <li><a href="http://www.twcmediakit.com/web/ad-products/">Products</a></li>
+                                <li><a href="http://www.twcmediakit.com/web/creative-specs/">Creative Specs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mobile</a>
+                            <ul class="sub-menu">
+                                <li><a href="http://www.twcmediakit.com/mobile/audience/">Audience</a></li>
+                                <li><a href="http://www.twcmediakit.com/mobile/ad-products/">Products</a></li>
+                                <li><a href="http://www.twcmediakit.com/mobile/creative-specs/">Creative Specs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://www.twcmediakit.com/news/">News</a></li>
+                         <li><a href="http://www.twcmediakit.com/showcase/">Showcase</a>
+                            
+                         </li>
+                                                  <li><a href="http://www.twcmediakit.com/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Section Title -->
+<section id="title-page">
+  <h2>Weather Showcase</h2>
+    <span class="arrow"></span>
+</section>
+<!-- End Section Ttile -->
+
+
+<div id="content">
+    <!-- Start Section Portfolio Filter -->
+    <section id="portfolio-filter" class="container margin-50">
+        <div class="row">
+            <div class="span12">
+            
+                <div class="dropdown">
+                    <div class="dropmenu">
+                        <p class="selected">Selection</p>
+                        <i class="font-icon-arrow-simple-down"></i>
+                    </div>
+                    
+                    <div class="dropmenu-active">
+                        <ul class="option-set" data-option-key="filter">
+                            <li><a href="#filter" data-option-value=".design">Television</a></li>
+                            <li><a href="#filter" data-option-value=".digital">Web</a></li>
+                            <li><a href="#filter" data-option-value=".icon">Mobile</a></li>
+                            <li><a href="#filter" data-option-value=".video">Every Screen</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
 
         </div>
-      </div>
-    </div>
+    </section>
+    <!-- End Section Portfolio Filter -->
+    
+    <!-- Start Section Portfolio Projects -->
+    <section id="portfolio" class="container">
+        <div class="row">
+        
+            <div id="portfolio-projects">
+                <ul id="projects">
+                
+                    <li class="item-project span4 design">
+                        <h5>
+                            <a href="single-project.html">Nike Fuel Band</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/12.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/12.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 digital">
+                        <h5>
+                            <a href="single-project.html">Farmer's Insurance</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/09.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/09.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 icon">
+                        <h5>
+                            <a href="single-project.html">Estee Lauder</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/01.jpg" data-fancybox-group="gallery" ttitle="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 video">
+                        <h5>
+                            <a href="single-project.html">Respond by Storm Dodge</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox-media" href="http://vimeo.com/50834315" data-fancybox-group="video" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/05.jpg" alt="CreativeFX" />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design digital">
+                        <h5>
+                            <a href="single-project.html">Captain Morgans</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/10.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/10.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 icon">
+                        <h5>
+                            <a href="single-project.html">Oz The Great and Powerful</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/03.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 video">
+                        <h5>
+                            <a href="single-project.html">Target</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox-media" href="http://vimeo.com/18439821" data-fancybox-group="video" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/06.jpg" />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design">
+                        <h5>
+                            <a href="single-project.html">Sheraton</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/13.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/13.jpg" />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 digital">
+                        <h5>
+                            <a href="single-project.html">Tostitos</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/11.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/11.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design">
+                        <h5>
+                            <a href="single-project.html">Jaguar</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/14.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/14.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design">
+                        <h5>
+                            <a href="single-project.html">Ace Harware</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/15.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/15.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 icon">
+                        <h5>
+                            <a href="single-project.html">Home Depot</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/04.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 digital video">
+                        <h5>
+                            <a href="single-project.html">Northface</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox-media" href="http://vimeo.com/29943426" data-fancybox-group="video" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/07.jpg" alt="CreativeFX" />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design icon">
+                        <h5>
+                            <a href="single-project.html">Michael's</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/02.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 video">
+                        <h5>
+                            <a href="single-project.html">Samsung</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox-media" href="http://vimeo.com/38940289" data-fancybox-group="video" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/08.jpg" alt="CreativeFX" />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="item-project span4 design">
+                        <h5>
+                            <a href="single-project.html">Panera Bread</a>
+                            <span class="arrow-port"></span>
+                        </h5>
+                        
+                        <a class="hover-wrap fancybox" href="_include/img/portfolio/full/16.jpg" data-fancybox-group="gallery" title="The Weather Company">
+                            <img src="_include/img/portfolio/thumb/16.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            <div class="overlay"></div>
+                            <i class="font-icon-plus"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Portfolio Projects -->
+</div>
 
+<!-- Start Twitter Feed -->
+<section id="twitter-feed">
+<span class="arrow-down"></span>
     <div class="container">
-      <div class="content">
-        {{ content }}
-      </div>
+        <div class="row">
+            <div class="span12">
+                <div class="twitter-list" data-count="1"></div>
+            </div>
+        </div>
+    </div>  
+</section>
+<!-- End Twitter Feed -->
 
-      <footer>
-      </footer>
-    </div> <!-- /container -->
+<!-- Start Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <nav id="social-footer">
+                <ul>
+                    <li><a target="_blank" href="https://twitter.com/weatherchannel" title="Tweet The Weather Channel"><i class="font-icon-social-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/TheWeatherChannel" title="The Weather Channel on Facebook"><i class="font-icon-social-facebook"></i></a></li>
+                    <li><a target="_blank" href="http://www.youtube.com/user/TheWeatherChannel" title="The Weather Channel on YouTube"><i class="font-icon-social-youtube"></i></a></li>
+                    <li><a target="_blank" href="https://vimeo.com/channels/theweatherchannel" title="The Weather Channel on Vimeo"><i class="font-icon-social-vimeo"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Start Credits -->
+<section id="footer-credits">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <p class="credits">© 1995 - 2013, The Weather Channel, LLC weather.com® Licensed by <a href="#">TRUSTe</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Credits -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+    <i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+
+<!-- Js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> <!-- Google Map API -->
+<script src="http://www.twcmediakit.com/_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+<script src="http://www.twcmediakit.com/_include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> <!-- Revolution Slider -->
+<script src="http://www.twcmediakit.com/_include/rs-plugin/js/jquery.themepunch.plugins.min.js"></script> <!-- Revolution Slider -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.superfish.min.js"></script> <!-- Superfish -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.supersubs.min.js"></script> <!-- Supersubs -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.tweet.js"></script> <!-- Tweet -->
+<script src="http://www.twcmediakit.com/_include/js/jquery.flickr.min.js"></script> <!-- Flickr -->
+<script src="http://www.twcmediakit.com/_include/js/plugins.js"></script> <!-- Contains: jQuery Easing, jQuery ScrollTo -->
+<script src="http://www.twcmediakit.com/_include/js/main.js"></script> <!-- Default JS -->
+<!-- End Js -->
+
+<!-- Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41411243-1', 'twcmediakit.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Analytics -->
 
     {% include JB/analytics %}
   </body>
 </html>
+
+
+<!--
+{{ content }}
+-->
