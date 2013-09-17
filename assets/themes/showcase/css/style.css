@@ -10,3 +10,9 @@
 .arrow-port {
 	border-top: 20px solid hsla(220, 76%, 40%, 1);
 }
+
+
+.span8 video {
+	width: 90%;
+	margin: 0 auto;
+}
