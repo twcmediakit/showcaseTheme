@@ -1,3 +1,12 @@
 #content {
   padding: 0 0 80px;
 }
+
+.item-project h5 {
+	top: 0px;
+	border: 1px solid hsla(220, 76%, 40%, 1);
+}
+
+.arrow-port {
+	border-top: 20px solid hsla(220, 76%, 40%, 1);
+}
