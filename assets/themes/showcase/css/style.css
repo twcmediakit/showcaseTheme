@@ -9,3 +9,11 @@
 #portfolio-filter {
 	margin: 20px 0;
 }
+
+.dropmenu p {
+	color: hsl(220, 76%, 40%);
+}
+
+.open .selected, .dropmenu .selected:hover, .dropmenu .selected:focus, .dropmenu .selected:active{
+	color: white;
+}
