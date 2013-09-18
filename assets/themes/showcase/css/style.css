@@ -12,7 +12,25 @@
 }
 
 
+/*
 .span8 video {
 	width: 90%;
 	margin: 0 auto;
+}
+*/
+
+@media screen and (max-width: 48em) {
+	.row {
+		margin-left: -20px;
+	}
+}
+
+@media screen and (max-width: 20em) {
+	#title-page {
+//		margin: 120px 0 0;
+	}
+
+	.row {
+		margin-left: 0;
+	}
 }
