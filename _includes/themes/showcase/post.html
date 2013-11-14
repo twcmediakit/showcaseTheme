@@ -6,8 +6,36 @@
   </div>
   <div class="row">
     <div class="span8">
-      {{ content }}
-      <hr>
+      <ul class="carousel">
+        {% if page.video %}
+        <li class="carousel_item visible">
+          <video class="carousel_video" src='video/so.usagames.2014.mp4' poster="images/video/so.usagames.2014.jpg">
+        </li>
+        <li class="carousel_item">
+          <img class="carousel_img" src="images/photos/wheelchair_race_2013-774x516.png">
+          <a class="carousel_link align_br round_tl bkg_blue text_white opacity_90 text_align_right text_shadow" href="#">Special Olympics Indiana — Monroe County works with nearly 200 athletes and their families. <span class="underline clear_left">Are you or a family member eligible to participate?</span></a>
+        </li>
+        {% else %}
+        <li class="carousel_item visible">
+          <img class="carousel_img" src="images/photos/wheelchair_race_2013-774x516.png">
+          <a class="carousel_link align_br round_tl bkg_blue text_white opacity_90 text_align_right text_shadow" href="#">Special Olympics Indiana — Monroe County works with nearly 200 athletes and their families. <span class="underline clear_left">Are you or a family member eligible to participate?</span></a>
+        </li>
+        {% endif %}
+        {% if page.img2 %}
+        <li class="carousel_item">
+          <img class="carousel_img" src="images/photos/athletics_champions_2012.jpg">
+          <a class="carousel_link align_br round_tl bkg_blue text_white opacity_90 text_align_right text_shadow" href="#">We offer year-round sports training and competition for children (8+) and adults with intellectual, cognitive or learning disabilities in seven different sports. <span class="underline clear_left">View the SOIMC calendar...</span></a>
+          </p>
+        </li>
+        {% endif %}
+        {% if page.img3 %}
+        <li class="carousel_item">
+          <img class="carousel_img" src="images/photos/equestrian_finals_2013.jpg">
+          <a class="carousel_link align_br round_tl bkg_blue text_white opacity_90 text_align_right text_shadow" href="#">Special Olympics is an opportunity for athletes to develop physical fitness, demonstrate courage, experience joy and share gifts, skills and friendship with others in our community. <span class="underline clear_left">Get involved...</span></a>
+          </p>
+        </li>
+        {% endif %}
+      </ul>        
       <div class="pagination btn-group">
         {% if page.previous %}
           <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
@@ -20,7 +48,6 @@
           <a class="btn next disabled">Next &rarr;</a>
         {% endif %}
       </div>
-      <hr>
     </div>
     
     <div class="span4">
