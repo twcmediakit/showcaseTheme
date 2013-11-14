@@ -17,3 +17,11 @@
 .open .selected, .dropmenu .selected:hover, .dropmenu .selected:focus, .dropmenu .selected:active{
 	color: white;
 }
+
+.carousel_item {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
