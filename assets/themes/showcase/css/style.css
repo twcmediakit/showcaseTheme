@@ -18,9 +18,13 @@
 	color: white;
 }
 
-.carousel_item {
-	display: none;
+.carousel {
+	max-width: 600px;
 }
+
+	.carousel_item {
+		display: none;
+	}
 
 .visible {
 	display: block;
