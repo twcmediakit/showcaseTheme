@@ -4,8 +4,6 @@
 		nextVisible = 1,
 		runCarousel;
 
-	carousel_items[0].classList.add('visible');
-
 	function startCarousel() {
 		runCarousel = setInterval(function() {
 			moveCarousel(nextVisible);
