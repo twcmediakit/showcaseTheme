@@ -29,3 +29,7 @@
 .visible {
 	display: block;
 }
+
+ul, ol, dl, li, dt {
+	list-style: none;
+}
