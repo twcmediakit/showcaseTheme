@@ -9,7 +9,10 @@
       <ul class="carousel">
         {% if page.video %}
         <li class="carousel_item visible">
-          <video class="carousel_video" src="{{ page.video }}" poster="{{ page.img1 }}" controls>
+          <video class="carousel_video" src="{{ page.video }}" controls>
+        </li>
+        <li class="carousel_item">
+          <img class="carousel_img" src="{{ page.img1 }}">
         </li>
         {% else %}
         <li class="carousel_item visible">
