@@ -40,7 +40,7 @@ ul, ol, dl, li, dt {
 
 @media only screen and (min-width: 769px) {
 	.carousel_item, .carousel_video {
-		width: 37.5em;
-		height: 25em;
+		width: 42.8571428571em;
+		height: 28.5714286em;
 	}
 }
