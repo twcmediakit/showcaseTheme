@@ -34,8 +34,19 @@
 	display: block;
 }
 
+.btn-group {
+	display: block;
+}
+
 ul, ol, dl, li, dt {
 	list-style: none;
+}
+
+@media only screen and (min-width: 769px) {
+	.carousel_item, .carousel_video {
+		width: 100%;
+		height: 56.25%;
+	}
 }
 
 @media only screen and (min-width: 769px) {
