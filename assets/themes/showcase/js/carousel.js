@@ -23,7 +23,7 @@
 		var playVideo = document.getElementsByClassName('playVideo')[0];
 
 		if(playVideo){
-			this.addEventListener('play', function() {
+			this.addEventListener('click', function() {
 				stopCarousel();
 				carouselVideo.play();
 				carouselVideo.controls = 'controls';
