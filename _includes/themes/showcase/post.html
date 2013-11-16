@@ -9,7 +9,7 @@
       <ul class="carousel">
         {% if page.video %}
         <li class="carousel_item visible">
-          <video class="carousel_video" src="{{ page.video }}" poster="{{ page.img1 }}" controls>
+          <video class="carousel_video" src="{{ page.video }}" poster="{{ page.img1 }}">
         </li>
         {% else %}
         <li class="carousel_item visible">
@@ -27,6 +27,21 @@
         </li>
         {% endif %}
       </ul>        
+    </div>
+    <div class="span4">
+      {{ page.content }}
+      {% unless page.tags == empty %}
+        <section>
+          <ul class="tag_box">More like this:
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
+          </ul>
+        </section>
+      {% endunless %}         
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
       <div class="pagination btn-group">
         {% if page.previous %}
           <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
@@ -39,17 +54,6 @@
           <a class="btn next disabled">Next &rarr;</a>
         {% endif %}
       </div>
-    </div>
-    
-    <div class="span4">
-      {% unless page.tags == empty %}
-        <section>
-          <ul class="tag_box">More like this:
-            {% assign tags_list = page.tags %}
-            {% include JB/tags_list %}
-          </ul>
-        </section>
-      {% endunless %}         
     </div>
   </div>
 </section>
