@@ -49,6 +49,10 @@
 	margin-bottom: 1em;
 }
 
+.playVideo {
+	display: none;
+}
+
 .tag_box {
 	clear: both;
 	text-align: right;
