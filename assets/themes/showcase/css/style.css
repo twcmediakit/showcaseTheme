@@ -50,6 +50,7 @@
 }
 
 .tag_box {
+	clear: both;
 	text-align: right;
 }
 
