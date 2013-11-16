@@ -36,5 +36,7 @@
 		clearInterval(runCarousel);
 	}
 
-	startCarousel();
+	if(carousel_items.length > 1) {
+		startCarousel();
+	}
 }());

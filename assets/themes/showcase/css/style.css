@@ -43,13 +43,12 @@ ul, ol, dl, li, dt {
 	list-style: none;
 }
 
+.tag_box {
+	margin-top: 1em;
+}
 @media only screen and (min-width: 769px) {
 	.carousel_item, .carousel_video {
 		width: 100%;
-	}
-
-	.carousel_video {
-		padding: 15px 0;
 	}
 }
 
