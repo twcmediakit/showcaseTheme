@@ -1,5 +1,5 @@
 #content {
-	padding: 0 0 40px;
+	padding: 0 0 3em;
 }
 
 #title-page {
@@ -19,19 +19,20 @@
 }
 
 .carousel {
-	max-width: 600px;
+	width: 100%;
+	height: 56.26%;
 }
 
 	.carousel_item {
 		display: none;
 	}
 
-	.carousel_img, .carousel_video {
+	.carousel_item, .carousel_img, .carousel_video {
 		width: 100%;
 		background-size: cover;
 	}
 
-.visible {
+.visible, .carousel_video {
 	display: block;
 }
 
@@ -39,22 +40,16 @@
 	display: block;
 }
 
+.pagination {
+	margin: 20px 0 0;
+}
+
 ul, ol, dl, li, dt {
 	list-style: none;
 }
 
-.tag_box {
-	margin-top: 1em;
-}
 @media only screen and (min-width: 769px) {
-	.carousel_item, .carousel_video {
-		width: 100%;
-	}
 }
 
 @media only screen and (min-width: 769px) {
-	.carousel_item, .carousel_video {
-		width: 42.8571428571em;
-		height: 28.5714286em;
-	}
 }
