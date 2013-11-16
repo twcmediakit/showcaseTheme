@@ -1,4 +1,4 @@
-(function showcaseCarousel() {
+/*(*/function showcaseCarousel() {
 	var carousel_items = document.getElementsByClassName('carousel_item'),
 		carouselVideo = document.getElementsByClassName('carousel_video')[0],
 		nextVisible = 1,
@@ -44,4 +44,5 @@
 	if(carousel_items.length > 1) {
 		startCarousel();
 	}
-}());
+}/*()); */
+showcaseCarousel()
