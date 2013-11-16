@@ -1,4 +1,4 @@
-/*(*/function showcaseCarousel() {
+(function showcaseCarousel() {
 	var carousel_items = document.getElementsByClassName('carousel_item'),
 		carouselVideo = document.getElementsByClassName('carousel_video')[0],
 		nextVisible = 1,
@@ -23,8 +23,10 @@
 		var playVideo = document.getElementsByClassName('playVideo')[0];
 
 		if(playVideo){
-			this.addEventListener('click', function() {
-				clearInterval(runCarousel);
+			playVideo.addEventListener('click', function() {
+				nextVisible = 0;
+				moveCarousel(nextVisible);
+				stopCarousel();
 				carouselVideo.play();
 				carouselVideo.controls = 'controls';
 				this.style.display = 'none';
@@ -32,6 +34,7 @@
 		}
 
 		carouselVideo.addEventListener('ended', function() {
+			nextVisible = 1;
 			moveCarousel(nextVisible);
 			startCarousel();
 			carouselVideo.load();
@@ -41,8 +44,11 @@
 
 	}
 
+	function stopCarousel() {
+		clearInterval(runCarousel);
+	}
+
 	if(carousel_items.length > 1) {
 		startCarousel();
 	}
-}/*()); */
-showcaseCarousel()
+}());
