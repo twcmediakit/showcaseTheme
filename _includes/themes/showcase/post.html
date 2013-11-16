@@ -9,7 +9,10 @@
       <ul class="carousel">
         {% if page.video %}
         <li class="carousel_item visible">
-          <video class="carousel_video" src="{{ page.video }}" poster="{{ page.img1 }}" preload="none">
+          <video class="carousel_video" poster="{{ page.img1 }}" preload="none">
+            <source src="{{ page.videoMp4 }}" type="video/mp4">
+            <source src="{{ page.videoOgv }}" type="video/ogg">
+          </video>
         </li>
         {% else %}
         <li class="carousel_item visible">
