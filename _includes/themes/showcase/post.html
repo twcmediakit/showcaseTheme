@@ -33,7 +33,7 @@
     </div>
     <div class="span4">
       {{ page.content }}
-      {% if page.video %}
+      {% if page.videoMp4 or page.videoOgv%}
         <a class="btn playVideo">Watch the video</a>
       {% endif %}
       {% unless page.tags == empty %}
