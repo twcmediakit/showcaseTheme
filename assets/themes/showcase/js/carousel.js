@@ -24,7 +24,7 @@
 
 		if(playVideo){
 			this.addEventListener('click', function() {
-				stopCarousel();
+				clearInterval(runCarousel);
 				carouselVideo.play();
 				carouselVideo.controls = 'controls';
 				this.style.display = 'none';
@@ -38,10 +38,7 @@
 			carouselVideo.controls = '';
 			playVideo.style.display = 'inline-block';
 		});
-	}
 
-	function stopCarousel() {
-		clearInterval(runCarousel);
 	}
 
 	if(carousel_items.length > 1) {
