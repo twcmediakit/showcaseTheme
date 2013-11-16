@@ -44,6 +44,15 @@
 	margin: 20px 0 0;
 }
 
+.playVideo, .tag_box {
+	float: right;
+	margin-bottom: 1em;
+}
+
+.tag_box {
+	text-align: right;
+}
+
 ul, ol, dl, li, dt {
 	list-style: none;
 }

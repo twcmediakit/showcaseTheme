@@ -30,6 +30,9 @@
     </div>
     <div class="span4">
       {{ page.content }}
+      {% if page.video %}
+        <a class="btn playVideo">Watch the video</a>
+      {% endif %}
       {% unless page.tags == empty %}
         <section>
           <ul class="tag_box">More like this:
