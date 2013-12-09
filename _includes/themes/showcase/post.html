@@ -36,12 +36,12 @@
       {% if page.videoMp4 or page.videoWebm%}
         <a class="btn playVideo">Watch the video</a>
       {% endif %}
-      {% unless page.tags == empty %}
+      {% unless page.categories == empty %}
         <section>
           <ul class="tag_box">
             <h3>More like this:</h3>
-            {% assign tags_list = page.tags %}
-            {% include JB/tags_list %}
+            {% assign categories_list = page.categories %}
+            {% include JB/categories_list %}
           </ul>
         </section>
       {% endunless %}         
