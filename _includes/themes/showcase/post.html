@@ -38,7 +38,8 @@
       {% endif %}
       {% unless page.tags == empty %}
         <section>
-          <ul class="tag_box">More like this:
+          <ul class="tag_box">
+            <h3>More like this:</h3>
             {% assign tags_list = page.tags %}
             {% include JB/tags_list %}
           </ul>
