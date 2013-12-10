@@ -68,6 +68,10 @@ ul, ol, dl, li, dt {
 	font-weight: 500;
 }
 
+.block {
+	display: block;
+}
+
 .blue {
 	color: #000000;
 	color: hsl(220, 76%, 40%);
