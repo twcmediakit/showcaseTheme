@@ -11,6 +11,7 @@
 }
 
 .dropmenu p {
+	color: #000;
 	color: hsl(220, 76%, 40%);
 }
 
@@ -58,7 +59,7 @@ ul, ol, dl, li, dt {
 	list-style: none;
 }
 
-.underline {
+.underline:hover, .underline:focus, .underline:active {
 	text-decoration: underline;
 }
 
@@ -68,10 +69,11 @@ ul, ol, dl, li, dt {
 }
 
 .blue {
+	color: #000000;
 	color: hsl(220, 76%, 40%);
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 768px) {
 	.mobile_center {
 		text-align: center;
 	}
@@ -90,6 +92,4 @@ ul, ol, dl, li, dt {
 	.desktop_margin_1_0 {
 		margin: 1em 0;
 	}
-}
-
 }
