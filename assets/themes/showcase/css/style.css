@@ -80,7 +80,7 @@ ul, ol, dl, li, dt {
 
 	.mobile_margin_0_auto {
 		width: 25%;
-		margin: 0 auto;
+		margin: 1.25em auto 0;
 	}
 }
 
@@ -90,6 +90,6 @@ ul, ol, dl, li, dt {
 	}
 
 	.desktop_margin_1_0 {
-		margin: 1em 0;
+		margin: 1.25em 0 0;
 	}
 }
