@@ -58,8 +58,38 @@ ul, ol, dl, li, dt {
 	list-style: none;
 }
 
-@media only screen and (min-width: 769px) {
+.underline {
+	text-decoration: underline;
+}
+
+
+.font_weight_500 {
+	font-weight: 500;
+}
+
+.blue {
+	color: hsl(220, 76%, 40%);
 }
 
 @media only screen and (min-width: 769px) {
+	.mobile_center {
+		text-align: center;
+	}
+
+	.mobile_margin_0_auto {
+		width: 25%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.desktop_float_right {
+		float: right;
+	}
+
+	.desktop_margin_1_0 {
+		margin: 1em 0;
+	}
+}
+
 }
