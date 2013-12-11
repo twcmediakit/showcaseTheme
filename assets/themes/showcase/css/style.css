@@ -85,6 +85,7 @@ ul, ol, dl, li, dt {
 	.btn-group > .btn, .btn-group > .btn:first-child, .btn-group > .btn:last-child {
 		width: 90%;
 		border-radius: 4px;
+		margin-bottom: .5em;
 		float: left;
 	}
 
