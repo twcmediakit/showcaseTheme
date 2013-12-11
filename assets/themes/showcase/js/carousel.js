@@ -1,4 +1,4 @@
-var soimc = (function() {
+var twcMediaKit = (function() {
 	var carousel_items = document.getElementsByClassName('carousel_item'),
 		carouselVideo = document.getElementsByClassName('carousel_video')[0],
 		currentlyVisible = 0,
