@@ -78,12 +78,22 @@ ul, ol, dl, li, dt {
 }
 
 @media only screen and (max-width: 768px) {
+	..btn-group > .btn {
+		clear: left;
+	}
+
+	.btn-group > .btn, .btn-group > .btn:first-child, .btn-group > .btn:last-child {
+		width: 90%;
+		border-radius: 4px;
+		float: left;
+	}
+
 	.mobile_center {
 		text-align: center;
 	}
 
 	.mobile_margin_0_auto {
-		width: 25%;
+		width: 50%;
 		margin: 1.25em auto 0;
 	}
 }
