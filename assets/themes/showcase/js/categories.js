@@ -1,7 +1,7 @@
 jQuery(function() {
     jQuery.fn.sortList = function() {
     var mylist = jQuery(this);
-    var listitems = jQuery('li', mylist).get();
+    var listitems = jQuery('li:not(:first)', mylist).get();
     listitems.sort(function(a, b) {
         var compA = jQuery(a).text().toUpperCase();
         var compB = jQuery(b).text().toUpperCase();
