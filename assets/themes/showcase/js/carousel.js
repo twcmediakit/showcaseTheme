@@ -1,54 +1,90 @@
-(function showcaseCarousel() {
+var soimc = (function() {
 	var carousel_items = document.getElementsByClassName('carousel_item'),
 		carouselVideo = document.getElementsByClassName('carousel_video')[0],
-		nextVisible = 1,
+		currentlyVisible = 0,
+		nextVisible = 0,
 		runCarousel;
 
-	function startCarousel() {
+	var startCarousel = function() {
+		moveCarousel(nextVisible);
 		runCarousel = setInterval(function() {
 			moveCarousel(nextVisible);
 		}, 5000);
-	}
+	};
 
-	function moveCarousel(currentlyVisible) {
+	var stopCarousel = function() {
+		clearInterval(runCarousel);
+	};
+
+	var moveCarousel = function() {
 		document.getElementsByClassName('visible')[0].classList.remove('visible');
+		carousel_items[nextVisible].classList.add('visible');
 		nextVisible++;
-		carousel_items[currentlyVisible].classList.add('visible');
-		if(currentlyVisible === carousel_items.length - 1) {
+		if(nextVisible === carousel_items.length) {
 				nextVisible = 0;
+			return nextVisible;
+		} else if ((nextVisible - 1) < 0){
+			nextVisible = carousel_items.length - 1;
+			return nextVisible;
 		}
-	}
+	};
+
+	var nextSlide = function(){
+		stopCarousel();
+		if(nextVisible >= carousel_items.length) {
+			nextVisible = 0;
+			moveCarousel(nextVisible);
+			return nextVisible;
+		} else {
+			moveCarousel(nextVisible);
+			return nextVisible;
+		}
+	};
+
+	var prevSlide = function() {
+		stopCarousel();
+		currentlyVisible -= 1;
+		if(currentlyVisible <= -1) {
+console.log('<0: ' + currentlyVisible);
+			currentlyVisible = carousel_items.length - 1;
+console.log('<0: ' + currentlyVisible);
+			moveCarousel(currentlyVisible);
+			nextVisible = currentlyVisible;
+			return nextVisible;
+		} else {
+console.log(currentlyVisible);
+			moveCarousel(currentlyVisible);
+			nextVisible = currentlyVisible;
+			return nextVisible;
+		}
+	};
 
 	if(carouselVideo) {
 		var playVideo = document.getElementsByClassName('playVideo')[0];
 
 		if(playVideo){
-			playVideo.addEventListener('click', function() {
-				nextVisible = 0;
-				moveCarousel(nextVisible);
+			playVideo.addEventListener('play', function() {
 				stopCarousel();
-				carouselVideo.play();
 				carouselVideo.controls = 'controls';
 				this.style.display = 'none';
 			});
-		}
 
 		carouselVideo.addEventListener('ended', function() {
-			nextVisible = 1;
 			moveCarousel(nextVisible);
 			startCarousel();
 			carouselVideo.load();
-			carouselVideo.controls = '';
 			playVideo.style.display = 'inline-block';
 		});
-
-	}
-
-	function stopCarousel() {
-		clearInterval(runCarousel);
 	}
 
 	if(carousel_items.length > 1) {
 		startCarousel();
 	}
+
+	return {
+		startCarousel: startCarousel,
+		stopCarousel: stopCarousel,
+		nextSlide: nextSlide,
+		prevSlide: prevSlide
+	};
 }());

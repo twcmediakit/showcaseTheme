@@ -78,7 +78,7 @@ ul, ol, dl, li, dt {
 }
 
 @media only screen and (max-width: 768px) {
-	..btn-group > .btn {
+	.btn-group > .btn {
 		clear: left;
 	}
 
