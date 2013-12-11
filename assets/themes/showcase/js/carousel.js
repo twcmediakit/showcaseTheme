@@ -5,6 +5,20 @@ var twcMediaKit = (function() {
 		nextVisible = 0,
 		runCarousel;
 
+	var moveCarousel = function() {
+		document.getElementsByClassName('visible')[0].classList.remove('visible');
+		carousel_items[nextVisible].classList.add('visible');
+		nextVisible += 1;
+		switch(nextVisible) {
+			case nextVisible === carousel_items.length:
+				nextVisible = 0;
+				return nextVisible;
+			case (nextVisible - 1) < 0:
+				nextVisible = carousel_items.length - 1;
+				return nextVisible;
+		}
+	};
+
 	var startCarousel = function() {
 		moveCarousel(nextVisible);
 		runCarousel = setInterval(function() {
@@ -16,29 +30,13 @@ var twcMediaKit = (function() {
 		clearInterval(runCarousel);
 	};
 
-	var moveCarousel = function() {
-		document.getElementsByClassName('visible')[0].classList.remove('visible');
-		carousel_items[nextVisible].classList.add('visible');
-		nextVisible++;
-		if(nextVisible === carousel_items.length) {
-				nextVisible = 0;
-			return nextVisible;
-		} else if ((nextVisible - 1) < 0){
-			nextVisible = carousel_items.length - 1;
-			return nextVisible;
-		}
-	};
-
 	var nextSlide = function(){
 		stopCarousel();
 		if(nextVisible >= carousel_items.length) {
 			nextVisible = 0;
-			moveCarousel(nextVisible);
-			return nextVisible;
-		} else {
-			moveCarousel(nextVisible);
-			return nextVisible;
 		}
+		moveCarousel(nextVisible);
+		return nextVisible;
 	};
 
 	var prevSlide = function() {
@@ -48,15 +46,10 @@ var twcMediaKit = (function() {
 console.log('<0: ' + currentlyVisible);
 			currentlyVisible = carousel_items.length - 1;
 console.log('<0: ' + currentlyVisible);
-			moveCarousel(currentlyVisible);
-			nextVisible = currentlyVisible;
-			return nextVisible;
-		} else {
-console.log(currentlyVisible);
-			moveCarousel(currentlyVisible);
-			nextVisible = currentlyVisible;
-			return nextVisible;
 		}
+		moveCarousel(currentlyVisible);
+		nextVisible = currentlyVisible;
+		return nextVisible;
 	};
 
 	if(carouselVideo) {
@@ -69,12 +62,13 @@ console.log(currentlyVisible);
 				this.style.display = 'none';
 			});
 
-		carouselVideo.addEventListener('ended', function() {
-			moveCarousel(nextVisible);
-			startCarousel();
-			carouselVideo.load();
-			playVideo.style.display = 'inline-block';
-		});
+			carouselVideo.addEventListener('ended', function() {
+				moveCarousel(nextVisible);
+				startCarousel();
+				carouselVideo.load();
+				playVideo.style.display = 'inline-block';
+			});
+		}
 	}
 
 	if(carousel_items.length > 1) {
