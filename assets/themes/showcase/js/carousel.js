@@ -11,11 +11,9 @@ var twcMediaKit = (function() {
 		carousel_items[nextVisible].classList.add('visible');
 		nextVisible++;
 		if(nextVisible === carousel_items.length) {
-console.log(nextVisible + ', resetting to 0');
 			nextVisible = 0;
 			return nextVisible;
 		} else if((nextVisible - 1) < 0) {
-console.log(nextVisible + ', resetting to ' + carousel_items.length - 1);
 			nextVisible = carousel_items.length - 1;
 		}
 		return nextVisible;
