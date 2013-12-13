@@ -9,15 +9,16 @@ var twcMediaKit = (function() {
 	var moveCarousel = function() {
 		document.getElementsByClassName('visible')[0].classList.remove('visible');
 		carousel_items[nextVisible].classList.add('visible');
-		nextVisible += 1;
-		switch(nextVisible) {
-			case nextVisible === carousel_items.length:
-				nextVisible = 0;
-				return nextVisible;
-			case (nextVisible - 1) < 0:
-				nextVisible = carousel_items.length - 1;
-				return nextVisible;
+		nextVisible++;
+		if(nextVisible === carousel_items.length) {
+console.log(nextVisible + ', resetting to 0');
+			nextVisible = 0;
+			return nextVisible;
+		} else if((nextVisible - 1) < 0) {
+console.log(nextVisible + ', resetting to ' + carousel_items.length - 1);
+			nextVisible = carousel_items.length - 1;
 		}
+		return nextVisible;
 	};
 
 	var startCarousel = function() {
@@ -54,7 +55,8 @@ console.log('<0: ' + currentlyVisible);
 	};
 
 	var playVideo = function() {
-		if(carouselVideo && videoButton){
+alert(videoButton);
+		// if(carouselVideo && videoButton){
 			videoButton.addEventListener('play', function() {
 				stopCarousel();
 				carouselVideo.controls = 'controls';
@@ -67,7 +69,7 @@ console.log('<0: ' + currentlyVisible);
 				carouselVideo.load();
 				videoButton.style.display = 'inline-block';
 			});
-		}
+		// }
 	};
 
 	if(carousel_items.length > 1) {
